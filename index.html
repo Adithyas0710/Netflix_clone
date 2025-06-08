@@ -1,0 +1,145 @@
+<!-- 
+  Author: Adithya S
+  Date: 07-06-2025
+  Description: A simple Netflix clone landing page created using HTML, CSS, and JavaScript.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: #fff;
+      }
+
+      .main-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        align-items: center;
+      }
+
+      .logo {
+        height: 40px;
+      }
+
+      .sign-in {
+        background-color: #e50914;
+        border: none;
+        padding: 8px 16px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 100px 20px;
+        background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/ccc1eaa5-8b89-4c16-ae08-3e537c83ce35/e340384f-b008-4bc4-b490-26d50c0b01f4/IN-en-20230605-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+
+      .hero h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+
+      .hero form input {
+        padding: 10px;
+        width: 300px;
+        margin-right: 10px;
+      }
+
+      .hero form button {
+        padding: 10px 20px;
+        background-color: #e50914;
+        color: white;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .featured {
+        padding: 40px 20px;
+        background-color: #111;
+      }
+
+      .featured h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .shows {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .shows img {
+        width: 180px;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+        alt="Netflix Logo"
+        class="logo"
+      />
+      <button class="sign-in">Sign In</button>
+    </header>
+
+    <section class="hero">
+      <h1>Unlimited movies, TV shows, and more.</h1>
+      <h2>Watch anywhere. Cancel anytime.</h2>
+      <form>
+        <input type="email" placeholder="Email address" />
+        <button type="submit">Get Started</button>
+      </form>
+    </section>
+
+    <section class="featured">
+      <h2>Popular on Netflix</h2>
+      <div class="shows">
+        <img
+          src="https://m.media-amazon.com/images/I/81MXV8N88cL._AC_SL1500_.jpg"
+          alt="Stranger Things"
+        />
+        <img
+          src="https://m.media-amazon.com/images/I/71c05lTE03L._AC_SY679_.jpg"
+          alt="Breaking Bad"
+        />
+        <img
+          src="https://m.media-amazon.com/images/I/61z5i2jLJIL._AC_SY879_.jpg"
+          alt="Wednesday"
+        />
+      </div>
+    </section>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const email = e.target.querySelector("input").value;
+        alert(Thanks! We'll contact you at ${email});
+      });
+    </script>
+  </body>
+</html>
